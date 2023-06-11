@@ -1,0 +1,27 @@
+<table style="border: 1px solid black">
+
+    <thead>
+      <tr>
+        <th scope="col">Serial no</th>
+        <th scope="col">Name</th>
+
+      </tr>
+    </thead>
+
+
+    <tbody>
+        <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $product): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+
+
+        <tr>
+            <th scope="row" class="text-center"><?php echo e($loop->iteration); ?></th>
+            <td><?php echo e($product->name); ?></td>
+
+          </tr>
+
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
+    </tbody>
+  </table>
+<?php /**PATH F:\Web\show-app\resources\views/admin/product/product_pdf.blade.php ENDPATH**/ ?>
